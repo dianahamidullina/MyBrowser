@@ -184,14 +184,6 @@ namespace MyBrowser
             settings.Show();
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-
-            DateTime dateTime = DateTime.UtcNow;
-            File.AppendAllText("browser/bookmarks.txt", "\n" + adress + "\t" + dateTime.ToString("HH:mm dd.MM.yy"));
-
-
-        }
+       
     }
 }
