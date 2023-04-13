@@ -21,7 +21,7 @@ namespace MyBrowser
     {
         ChromiumWebBrowser chrom;
         Settings.SettingPar setp;
-        Bookmarks Bookmarks;
+     
         string adress;
         public Form1()
         {
