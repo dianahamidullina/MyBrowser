@@ -34,11 +34,11 @@ namespace MyBrowser
                 if (setp.saveHist)
                 {
                     DateTime dateTime = DateTime.UtcNow;
-                    File.AppendAllText("browser/history.txt", "\n" + site + "\t" + dateTime.ToString("HH:mm dd.MM.yy"));
+                    File.AppendAllText(@".\..\..\Hist.txt" , "\n" + site + "\t" + dateTime.ToString("HH:mm dd.MM.yy"));
                 }
                 else
                 {
-                    File.AppendAllText("browser/history.txt", "\n" + site);
+                    File.AppendAllText(@".\..\..\Hist.txt", "\n" + site);
                 }
             }
         }

@@ -35,7 +35,7 @@ namespace MyBrowser
 
         private void Settings_Load(object sender, EventArgs e)
         {
-            string[] hist = File.ReadAllLines("browser/history.txt");
+            string[] hist = File.ReadAllLines(@".\..\..\Hist.txt");
             listBox1.Items.AddRange(hist);
             try
             {
@@ -69,7 +69,7 @@ namespace MyBrowser
 
         private void button1_Click(object sender, EventArgs e)
         {
-            File.WriteAllText("browser/history.txt", "");
+            File.WriteAllText(@".\..\..\Hist.txt", "");
             listBox1.Items.Clear();
         }
     }

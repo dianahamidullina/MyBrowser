@@ -159,6 +159,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Hist.txt" />
     <Content Include="online_internet_web_browser_website_icon_218839.ico" />
     <None Include="Resources\icons8-меню-24.png" />
     <None Include="Resources\icons8-настройки-32.png" />
