@@ -64,8 +64,8 @@ namespace MyBrowser
             {
                 setp = new Settings.SettingPar
                 {
-                    searchSys = "Yandex",
-                    startSys = "ya.ru",
+                    searchSys = "Google",
+                    startSys = "google.com",
                     saveHist = true,
                     saveType = "Адрес",
                     saveDate = false
