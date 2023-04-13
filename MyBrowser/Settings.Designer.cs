@@ -145,12 +145,13 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.LavenderBlush;
             this.button1.Location = new System.Drawing.Point(151, 155);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(166, 28);
             this.button1.TabIndex = 3;
             this.button1.Text = "Очистить историю";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
@@ -205,6 +206,7 @@
             // 
             // listBox1
             // 
+            this.listBox1.BackColor = System.Drawing.Color.LavenderBlush;
             this.listBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 16;
@@ -215,23 +217,26 @@
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.LavenderBlush;
             this.button2.Location = new System.Drawing.Point(235, 489);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(118, 40);
             this.button2.TabIndex = 7;
             this.button2.Text = "Готово";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(859, 541);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
             this.Name = "Settings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Настройки";

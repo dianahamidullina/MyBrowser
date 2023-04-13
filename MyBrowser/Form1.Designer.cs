@@ -64,7 +64,7 @@
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(132, 5);
+            this.textBox1.Location = new System.Drawing.Point(132, 9);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(507, 28);
             this.textBox1.TabIndex = 3;
@@ -93,32 +93,34 @@
             // button5
             // 
             this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button5.BackColor = System.Drawing.Color.LavenderBlush;
             this.button5.BackgroundImage = global::MyBrowser.Properties.Resources.icons8_настройки_32;
-            this.button5.Location = new System.Drawing.Point(1125, 5);
+            this.button5.Location = new System.Drawing.Point(1127, 0);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(37, 32);
+            this.button5.Size = new System.Drawing.Size(35, 37);
             this.button5.TabIndex = 6;
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.BackColor = System.Drawing.Color.LavenderBlush;
             this.button4.Image = global::MyBrowser.Properties.Resources.icons8_добавить_32;
-            this.button4.Location = new System.Drawing.Point(1168, 5);
+            this.button4.Location = new System.Drawing.Point(1168, 0);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(37, 32);
+            this.button4.Size = new System.Drawing.Size(37, 37);
             this.button4.TabIndex = 5;
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.Image = global::MyBrowser.Properties.Resources.icons8_поиск_34;
-            this.button3.Location = new System.Drawing.Point(645, 5);
+            this.button3.Location = new System.Drawing.Point(645, 0);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(39, 35);
+            this.button3.Size = new System.Drawing.Size(44, 40);
             this.button3.TabIndex = 4;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -126,9 +128,9 @@
             // button2
             // 
             this.button2.Image = global::MyBrowser.Properties.Resources.icons8_вперед_34;
-            this.button2.Location = new System.Drawing.Point(89, 5);
+            this.button2.Location = new System.Drawing.Point(89, 0);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(37, 32);
+            this.button2.Size = new System.Drawing.Size(37, 37);
             this.button2.TabIndex = 2;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -136,9 +138,9 @@
             // button1
             // 
             this.button1.Image = global::MyBrowser.Properties.Resources.icons8_обновить_32;
-            this.button1.Location = new System.Drawing.Point(46, 5);
+            this.button1.Location = new System.Drawing.Point(46, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(37, 32);
+            this.button1.Size = new System.Drawing.Size(37, 37);
             this.button1.TabIndex = 1;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -146,9 +148,9 @@
             // update_button
             // 
             this.update_button.Image = global::MyBrowser.Properties.Resources.icons8_назад_34;
-            this.update_button.Location = new System.Drawing.Point(3, 5);
+            this.update_button.Location = new System.Drawing.Point(3, 0);
             this.update_button.Name = "update_button";
-            this.update_button.Size = new System.Drawing.Size(37, 32);
+            this.update_button.Size = new System.Drawing.Size(37, 37);
             this.update_button.TabIndex = 0;
             this.update_button.UseVisualStyleBackColor = true;
             this.update_button.Click += new System.EventHandler(this.update_button_Click);
