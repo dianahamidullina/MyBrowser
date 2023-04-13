@@ -83,6 +83,26 @@ namespace MyBrowser.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_закладка_лента_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-закладка-лента-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_меню_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-меню-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_назад_34 {
             get {
                 object obj = ResourceManager.GetObject("icons8-назад-34", resourceCulture);

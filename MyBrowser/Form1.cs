@@ -21,6 +21,7 @@ namespace MyBrowser
     {
         ChromiumWebBrowser chrom;
         Settings.SettingPar setp;
+        Bookmarks Bookmarks;
         string adress;
         public Form1()
         {
@@ -41,6 +42,7 @@ namespace MyBrowser
                 }
             }
         }
+
         private void update_button_Click(object sender, EventArgs e)
         {
 
@@ -61,14 +63,14 @@ namespace MyBrowser
             catch (Exception ex)
             {
                 setp = new Settings.SettingPar
-                { 
-                searchSys = "Yandex",
-                startSys = "ya.ru",
-                saveHist = true ,
-                saveType = "Адрес",
-                saveDate = false
-                 };
-             }
+                {
+                    searchSys = "Yandex",
+                    startSys = "ya.ru",
+                    saveHist = true,
+                    saveType = "Адрес",
+                    saveDate = false
+                };
+            }
             CefSettings settings = new CefSettings();
             Cef.Initialize(settings);
 
@@ -87,8 +89,8 @@ namespace MyBrowser
                 textBox1.Text = e.Address;
                 adress = e.Address;
             }));
-        
-    }
+
+        }
 
         private void Chrom_TitleChanged(object sender, TitleChangedEventArgs e)
         {
@@ -96,7 +98,7 @@ namespace MyBrowser
             {
 
                 tabControl1.SelectedTab.Text = e.Title;
-               if(setp.saveType == "Адрес")
+                if (setp.saveType == "Адрес")
                 {
                     AddHistory(adress);
                 }
@@ -107,7 +109,7 @@ namespace MyBrowser
             }));
         }
 
-      
+
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             Cef.Shutdown();
@@ -127,7 +129,7 @@ namespace MyBrowser
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (Regex.IsMatch( textBox1.Text , @"^http\w*"))
+            if (Regex.IsMatch(textBox1.Text, @"^http\w*"))
             {
                 MessageBox.Show(setp.searchSys);
                 ChromiumWebBrowser chrome = tabControl1.SelectedTab.Controls[0] as ChromiumWebBrowser;
@@ -139,16 +141,16 @@ namespace MyBrowser
             }
             else
             {
-                if(setp.searchSys == "Yandex")
+                if (setp.searchSys == "Yandex")
                 {
                     chrom.Load("https://yandex.ru/search/?text=" + textBox1.Text);
                 }
-                else if(setp.searchSys == "Google")
+                else if (setp.searchSys == "Google")
                 {
                     chrom.Load("https://www.google.ru/search?q" + textBox1.Text);
                 }
             }
-           
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -156,7 +158,7 @@ namespace MyBrowser
 
             ChromiumWebBrowser chrome = tabControl1.SelectedTab.Controls[0] as ChromiumWebBrowser;
 
-            if(chrome != null)
+            if (chrome != null)
             {
                 chrome.Reload();
             }
@@ -168,7 +170,7 @@ namespace MyBrowser
 
             ChromiumWebBrowser chrome = tabControl1.SelectedTab.Controls[0] as ChromiumWebBrowser;
 
-            if (chrome != null  && chrome.CanGoForward)
+            if (chrome != null && chrome.CanGoForward)
             {
                 chrome.Forward();
             }
@@ -178,8 +180,18 @@ namespace MyBrowser
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Settings  settings = new Settings();
+            Settings settings = new Settings();
             settings.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+
+            DateTime dateTime = DateTime.UtcNow;
+            File.AppendAllText("browser/bookmarks.txt", "\n" + adress + "\t" + dateTime.ToString("HH:mm dd.MM.yy"));
+
+
         }
     }
 }

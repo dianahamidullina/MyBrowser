@@ -62,7 +62,7 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Поиск";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+           
             // 
             // label3
             // 
@@ -72,7 +72,7 @@
             this.label3.Size = new System.Drawing.Size(135, 16);
             this.label3.TabIndex = 0;
             this.label3.Text = "Поисковая система";
-            this.label3.Click += new System.EventHandler(this.label1_Click);
+          
             // 
             // label4
             // 
@@ -82,7 +82,6 @@
             this.label4.Size = new System.Drawing.Size(142, 16);
             this.label4.TabIndex = 1;
             this.label4.Text = "Стартовая страница";
-            this.label4.Click += new System.EventHandler(this.label2_Click);
             // 
             // comboBox1
             // 
@@ -95,7 +94,7 @@
             this.comboBox1.Size = new System.Drawing.Size(99, 24);
             this.comboBox1.TabIndex = 2;
             this.comboBox1.Text = "Yandex";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+           
             // 
             // comboBox2
             // 
@@ -108,7 +107,6 @@
             this.comboBox2.Size = new System.Drawing.Size(99, 24);
             this.comboBox2.TabIndex = 3;
             this.comboBox2.Text = "ya.ru";
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // groupBox2
             // 
@@ -241,7 +239,7 @@
             this.MaximizeBox = false;
             this.Name = "Settings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Настройки";
+            this.Text = "Меню";
             this.Load += new System.EventHandler(this.Settings_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

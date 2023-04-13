@@ -33,6 +33,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -46,6 +47,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Lavender;
+            this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
@@ -90,11 +92,24 @@
             this.tabPage1.Text = "Новая вкладка";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Lavender;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Image = global::MyBrowser.Properties.Resources.icons8_закладка_лента_24;
+            this.button6.Location = new System.Drawing.Point(1085, 0);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(36, 40);
+            this.button6.TabIndex = 7;
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // button5
             // 
             this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.BackColor = System.Drawing.Color.LavenderBlush;
-            this.button5.BackgroundImage = global::MyBrowser.Properties.Resources.icons8_настройки_32;
+            this.button5.BackColor = System.Drawing.Color.Lavender;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Image = global::MyBrowser.Properties.Resources.icons8_меню_24;
             this.button5.Location = new System.Drawing.Point(1127, 0);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(35, 37);
@@ -105,7 +120,8 @@
             // button4
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.BackColor = System.Drawing.Color.LavenderBlush;
+            this.button4.BackColor = System.Drawing.Color.Lavender;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Image = global::MyBrowser.Properties.Resources.icons8_добавить_32;
             this.button4.Location = new System.Drawing.Point(1168, 0);
             this.button4.Name = "button4";
@@ -186,6 +202,7 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }
 
