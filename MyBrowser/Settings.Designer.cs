@@ -89,9 +89,9 @@
             this.comboBox1.Items.AddRange(new object[] {
             "Yandex",
             "Google"});
-            this.comboBox1.Location = new System.Drawing.Point(180, 31);
+            this.comboBox1.Location = new System.Drawing.Point(211, 31);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.Size = new System.Drawing.Size(99, 24);
             this.comboBox1.TabIndex = 2;
             this.comboBox1.Text = "Yandex";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
@@ -102,9 +102,9 @@
             this.comboBox2.Items.AddRange(new object[] {
             "ya.ru",
             "google.com"});
-            this.comboBox2.Location = new System.Drawing.Point(180, 74);
+            this.comboBox2.Location = new System.Drawing.Point(211, 74);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
+            this.comboBox2.Size = new System.Drawing.Size(99, 24);
             this.comboBox2.TabIndex = 3;
             this.comboBox2.Text = "ya.ru";
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
@@ -137,7 +137,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(157, 37);
+            this.checkBox1.Location = new System.Drawing.Point(211, 41);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(18, 17);
             this.checkBox1.TabIndex = 2;
@@ -145,12 +145,13 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(157, 164);
+            this.button1.Location = new System.Drawing.Point(151, 155);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(166, 28);
             this.button1.TabIndex = 3;
             this.button1.Text = "Очистить историю";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -167,9 +168,9 @@
             this.comboBox3.Items.AddRange(new object[] {
             "Адрес",
             "Заголовок"});
-            this.comboBox3.Location = new System.Drawing.Point(157, 64);
+            this.comboBox3.Location = new System.Drawing.Point(211, 64);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 24);
+            this.comboBox3.Size = new System.Drawing.Size(99, 24);
             this.comboBox3.TabIndex = 5;
             this.comboBox3.Text = "Адрес";
             // 
@@ -185,7 +186,7 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(157, 95);
+            this.checkBox2.Location = new System.Drawing.Point(211, 95);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(18, 17);
             this.checkBox2.TabIndex = 7;

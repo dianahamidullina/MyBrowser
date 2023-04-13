@@ -57,6 +57,8 @@ namespace MyBrowser
 
         private void Settings_Load(object sender, EventArgs e)
         {
+            string[] hist = File.ReadAllLines("browser/history.txt");
+            listBox1.Items.AddRange(hist);
             try
             {
                 SettingPar setp = JsonSerializer.Deserialize<SettingPar>(File.ReadAllText("browser/settings.json"));
@@ -85,6 +87,12 @@ namespace MyBrowser
             };
             string json = JsonSerializer.Serialize(settingPar);
             File.WriteAllText("browser/settings.json", json);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            File.WriteAllText("browser/history.txt", "");
+            listBox1.Items.Clear();
         }
     }
 }

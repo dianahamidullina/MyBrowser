@@ -21,11 +21,26 @@ namespace MyBrowser
     {
         ChromiumWebBrowser chrom;
         Settings.SettingPar setp;
+        string adress;
         public Form1()
         {
             InitializeComponent();
         }
-
+        public void AddHistory(string site)
+        {
+            if (setp.saveDate)
+            {
+                if (setp.saveHist)
+                {
+                    DateTime dateTime = DateTime.UtcNow;
+                    File.AppendAllText("browser/history.txt", "\n" + site + "\t" + dateTime.ToString("HH:mm dd.MM.yy"));
+                }
+                else
+                {
+                    File.AppendAllText("browser/history.txt", "\n" + site);
+                }
+            }
+        }
         private void update_button_Click(object sender, EventArgs e)
         {
 
@@ -70,6 +85,7 @@ namespace MyBrowser
             {
                 tabControl1.SelectedTab.Text = e.Address;
                 textBox1.Text = e.Address;
+                adress = e.Address;
             }));
         
     }
@@ -78,8 +94,16 @@ namespace MyBrowser
         {
             this.Invoke(new MethodInvoker(() =>
             {
+
                 tabControl1.SelectedTab.Text = e.Title;
-               
+               if(setp.saveType == "Адрес")
+                {
+                    AddHistory(adress);
+                }
+                else
+                {
+                    AddHistory(e.Title);
+                }
             }));
         }
 
@@ -93,7 +117,7 @@ namespace MyBrowser
         {
             TabPage tabPage = new TabPage();
             tabPage.Text = "Новая вкладка";
-            ChromiumWebBrowser chrome = new ChromiumWebBrowser("https://ya.ru");
+            ChromiumWebBrowser chrome = new ChromiumWebBrowser("https://" + setp.startSys);
             chrom.AddressChanged += Chrom_AddressChanged;
             chrom.TitleChanged += Chrom_TitleChanged;
             tabPage.Controls.Add(chrome);
