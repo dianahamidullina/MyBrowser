@@ -3,18 +3,24 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CefSharp;
 using CefSharp.WinForms;
+
 
 namespace MyBrowser
 {
     public partial class Form1 : Form
     {
         ChromiumWebBrowser chrom;
+        Settings.SettingPar setp;
         public Form1()
         {
             InitializeComponent();
@@ -33,10 +39,25 @@ namespace MyBrowser
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            try
+            {
+                setp = JsonSerializer.Deserialize<Settings.SettingPar>(File.ReadAllText("browser/settings.json"));
+            }
+            catch (Exception ex)
+            {
+                setp = new Settings.SettingPar
+                { 
+                searchSys = "Yandex",
+                startSys = "ya.ru",
+                saveHist = true ,
+                saveType = "Адрес",
+                saveDate = false
+                 };
+             }
             CefSettings settings = new CefSettings();
             Cef.Initialize(settings);
 
-            chrom = new ChromiumWebBrowser("https://ya.ru"); // стартовая страница
+            chrom = new ChromiumWebBrowser("https://" + setp.startSys); // стартовая страница
             chrom.AddressChanged += Chrom_AddressChanged;
             chrom.TitleChanged += Chrom_TitleChanged;
 
@@ -82,12 +103,28 @@ namespace MyBrowser
 
         private void button3_Click(object sender, EventArgs e)
         {
-            ChromiumWebBrowser chrome = tabControl1.SelectedTab.Controls[0] as ChromiumWebBrowser;
-
-            if (chrome != null)
+            if (Regex.IsMatch( textBox1.Text , @"^http\w*"))
             {
-                chrome.Load(textBox1.Text);
+                MessageBox.Show(setp.searchSys);
+                ChromiumWebBrowser chrome = tabControl1.SelectedTab.Controls[0] as ChromiumWebBrowser;
+
+                if (chrome != null)
+                {
+                    chrome.Load(textBox1.Text);
+                }
             }
+            else
+            {
+                if(setp.searchSys == "Yandex")
+                {
+                    chrom.Load("https://yandex.ru/search/?text=" + textBox1.Text);
+                }
+                else if(setp.searchSys == "Google")
+                {
+                    chrom.Load("https://www.google.ru/search?q" + textBox1.Text);
+                }
+            }
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -113,6 +150,12 @@ namespace MyBrowser
             }
 
 
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Settings  settings = new Settings();
+            settings.Show();
         }
     }
 }

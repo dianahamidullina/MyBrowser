@@ -28,30 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.update_button = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.update_button = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // update_button
-            // 
-            this.update_button.Location = new System.Drawing.Point(3, 5);
-            this.update_button.Name = "update_button";
-            this.update_button.Size = new System.Drawing.Size(37, 32);
-            this.update_button.TabIndex = 0;
-            this.update_button.UseVisualStyleBackColor = true;
-            this.update_button.Click += new System.EventHandler(this.update_button_Click);
-            // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Lavender;
+            this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.textBox1);
@@ -64,24 +59,6 @@
             this.panel1.Size = new System.Drawing.Size(1217, 40);
             this.panel1.TabIndex = 2;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(46, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(37, 32);
-            this.button1.TabIndex = 1;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(89, 5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(37, 32);
-            this.button2.TabIndex = 2;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // textBox1
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -91,16 +68,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(507, 28);
             this.textBox1.TabIndex = 3;
-            // 
-            // button3
-            // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(645, 5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(37, 32);
-            this.button3.TabIndex = 4;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // tabControl1
             // 
@@ -123,15 +90,68 @@
             this.tabPage1.Text = "Новая вкладка";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // button5
+            // 
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button5.BackgroundImage = global::MyBrowser.Properties.Resources.icons8_настройки_32;
+            this.button5.Location = new System.Drawing.Point(1125, 5);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(37, 32);
+            this.button5.TabIndex = 6;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // button4
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.Image = global::MyBrowser.Properties.Resources.icons8_добавить_32;
             this.button4.Location = new System.Drawing.Point(1168, 5);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(37, 32);
             this.button4.TabIndex = 5;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.Image = global::MyBrowser.Properties.Resources.icons8_поиск_34;
+            this.button3.Location = new System.Drawing.Point(645, 5);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(39, 35);
+            this.button3.TabIndex = 4;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.Image = global::MyBrowser.Properties.Resources.icons8_вперед_34;
+            this.button2.Location = new System.Drawing.Point(89, 5);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(37, 32);
+            this.button2.TabIndex = 2;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Image = global::MyBrowser.Properties.Resources.icons8_обновить_32;
+            this.button1.Location = new System.Drawing.Point(46, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(37, 32);
+            this.button1.TabIndex = 1;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // update_button
+            // 
+            this.update_button.Image = global::MyBrowser.Properties.Resources.icons8_назад_34;
+            this.update_button.Location = new System.Drawing.Point(3, 5);
+            this.update_button.Name = "update_button";
+            this.update_button.Size = new System.Drawing.Size(37, 32);
+            this.update_button.TabIndex = 0;
+            this.update_button.UseVisualStyleBackColor = true;
+            this.update_button.Click += new System.EventHandler(this.update_button_Click);
             // 
             // Form1
             // 
@@ -140,6 +160,7 @@
             this.ClientSize = new System.Drawing.Size(1217, 657);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "MyBrowser";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
@@ -162,6 +183,7 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }
 
